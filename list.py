@@ -53,7 +53,7 @@ if __name__ == "__main__":
     guiWindow.title("To-Do List ")  
     guiWindow.geometry("665x400+550+250")   
     guiWindow.resizable(0, 0)  
-    guiWindow.configure(bg = "#B5E5CF")  
+    guiWindow.configure(bg = "#F8FCFA")  
    
     the_connection = sql.connect('listOfTasks.db')   
     the_cursor = the_connection.cursor()   
@@ -61,17 +61,18 @@ if __name__ == "__main__":
     
     tasks = []  
         
-    functions_frame = Frame(guiWindow, bg = "#8EE5EE") 
+    functions_frame = Frame(guiWindow, bg = "#F3F9FA") 
     
     functions_frame.pack(side = "top", expand = True, fill = "both")  
  
-    task_label = Label( functions_frame,text = "TO-DO-LIST \n Enter the Task Title:",  
+    task_label = Label( functions_frame,text = "TO-DO-LIST \n Enter the Task Title:", 
         font = ("arial", "14", "bold"),  
-        background = "#8EE5EE", 
-        foreground="#FF6103"
-    )    
-    task_label.place(x = 20, y = 30)  
-        
+        background = "#EDEFF0", 
+        foreground="#0C0C0C"
+    ) 
+    task_label.place(x = 20, y = 30)
+
+
     task_field = Entry(  
         functions_frame,  
         font = ("Arial", "14"),  
@@ -85,7 +86,7 @@ if __name__ == "__main__":
         functions_frame,  
         text = "Add",  
         width = 15,
-        bg='#D4AC0D',font=("arial", "14", "bold"),
+        bg="#6FDBF7",font=("arial", "14", "bold"),
         command = add_task,
         
     )  
@@ -93,7 +94,7 @@ if __name__ == "__main__":
         functions_frame,  
         text = "Remove",  
         width = 15,
-        bg='#D4AC0D', font=("arial", "14", "bold"),
+        bg="#86E3FA", font=("arial", "14", "bold"),
         command = delete_task,  
     )  
     del_all_button = Button(  
@@ -101,7 +102,7 @@ if __name__ == "__main__":
         text = "Delete All",  
         width = 15,
         font=("arial", "14", "bold"),
-        bg='#D4AC0D',
+        bg="#7EF3FC",
         command = delete_all_tasks  
     )
     
@@ -109,7 +110,7 @@ if __name__ == "__main__":
         functions_frame,  
         text = "Exit / Close",  
         width = 52,
-        bg='#D4AC0D',  font=("arial", "14", "bold"),
+        bg="#6CE7F0",  font=("arial", "14", "bold"),
         command = close  
     )    
     add_button.place(x = 18, y = 80,)  
@@ -125,7 +126,7 @@ if __name__ == "__main__":
         selectmode = 'SINGLE',  
         background = "WHITE",
         foreground="BLACK",    
-        selectbackground = "#FF8C00",  
+        selectbackground = "#76FAF3",  
         selectforeground="BLACK"
     )    
     task_listbox.place(x = 17, y = 140)  
